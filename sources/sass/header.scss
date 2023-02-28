@@ -1,0 +1,110 @@
+@import "menu-burger.scss";
+
+.menu-burger {
+    display: none;
+    position: absolute;
+    right: 50px;
+    
+    img {
+        width: 30px;
+    }
+}
+.header{
+
+    & section {
+        height: 85px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+}
+.logo{
+    white-space: nowrap;
+
+    span {
+        font-family: 'Playfair Display', serif;
+        line-height: 20px;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        color: #555248;
+    }
+    img {
+        height: 20px;
+    }
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 422px;
+
+    & a {
+        font-size: 14px;
+        line-height: 40px;
+        color: #555248;
+    }
+}
+.tools{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 97px;
+
+    & > * {
+        display: flex;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+    }
+    & img {
+        width: 17px;
+    }
+    &__like {
+        position: relative;
+
+        & a {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+        & span {
+            position: absolute;
+            top: 0px;
+            right: -3px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #E6C8B4;
+            font-size: 8px;
+            line-height: 12px;
+            text-align: center;
+            color: #1B1A17;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .menu{
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-burger {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .tools {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 394px) {
+    .menu-burger {
+        right: 15px;
+    }
+}

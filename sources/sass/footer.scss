@@ -1,0 +1,107 @@
+footer {
+    margin-top: 40px;
+    
+    & section {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 70px 180px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0px;
+            height: 100%;
+            width: 100vw;
+            transform: translateX(-50%);
+            background: #444240;
+            z-index: -2;
+        }
+        & > div {
+            display: flex;
+            flex-direction: column;
+        } 
+        & .footer__logo {
+            & .logo{
+                margin-top: -7px;
+                span {
+                    line-height: 13px;
+                    vertical-align: bottom;
+                    color: #FFFFFF;
+                }
+            }
+            & span {
+                margin-bottom: 15px;
+                font-size: 12px;
+                color: #ffffffbf;
+            }
+        }
+        & .item {
+            &__heading {
+                margin-bottom: 32px;
+                font-weight: 700;
+                font-size: 14px;
+                letter-spacing: 0.07em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                white-space: nowrap;
+            }
+
+            & a {
+                margin-bottom: 15px;
+                font-size: 12px;
+                color: #ffffffbf;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    footer {
+        & section {
+            padding: 60px 150px;
+            flex-wrap: wrap;
+
+            & .item {
+                flex: 1 1 calc(50% - 15px);
+                
+                &__heading {
+                    margin-bottom: 25px;
+                }
+                & a {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        & section {
+            padding: 40px 80px;
+
+            & .item {
+                &__heading {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    footer {
+        & section {
+            & .item {
+                flex: 1 1 100%;
+            }
+        }
+    }
+}

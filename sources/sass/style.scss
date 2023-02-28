@@ -1,0 +1,49 @@
+// Обнуляем стили.
+@import "../css/nullStyle";
+
+// Подключаем шрифты.
+@import "../fonts/PlayfairDisplay/PlayfairDisplay";
+@import "../fonts/Prata/Prata";
+@import "../fonts/Roboto/Roboto";
+
+// Подключаем стили всей страницы.
+@import "header.scss";
+@import "main.scss";
+@import "footer.scss";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #FDFDFB;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+section {
+    padding: 0px 100px;
+    margin: 0px auto;
+    max-width: 1366px;
+}
+
+
+@media (max-width: 1024px) {
+    section {
+        padding: 0px 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 0px 50px;
+    }
+}
+
+@media (max-width: 394px) {
+    section {
+        padding: 0px 15px;
+    }
+}

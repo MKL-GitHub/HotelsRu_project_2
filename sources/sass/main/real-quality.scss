@@ -1,0 +1,178 @@
+%mask {
+    mask:
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; 
+    mask-composite: exclude;
+}
+
+.real-quality {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+
+    &__image{
+        position: relative;
+        margin-left: 35px;
+
+        & .image-background {
+            position: absolute;
+            left: -42%;
+            top: -15%;
+            height: 130%;
+            width: 98%;
+            background: #F7F5EF;
+            z-index: -2;
+        }
+        & img {
+            width: 100%;
+        }
+        & .leaf-through {
+            position: absolute;
+            right: 15%;
+            bottom: -10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 62px;
+            height: 20px;
+            
+            & span {
+                font-family: 'Prata';
+                font-size: 12px;
+                color: #1b1a17d1;
+            }
+            & a {
+                display: block;
+                width: 11px;
+                height: 11px;
+                border-top: 0.5px solid #1B1A17;
+                border-left: 0.5px solid #1B1A17;
+            }
+            & .back {
+                transform: rotate(-45deg);
+            }
+            & .forth {
+                transform: rotate(135deg);
+            }
+        }
+        // <div class="leaf-through">
+        //     <a href="#" class="back"></a>
+        //     <span></span>
+        //     <a href="" class="forth"></a>
+        // </div>
+    }
+    &__body{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 125px;
+    }
+    &__body-background{
+        position: absolute;
+        right: -85%;
+        top: -15%;
+        width: 85%;
+        height: 130%;
+        overflow: hidden;
+
+        .top-circle {
+            position: absolute;
+            width: 145%;
+            height: 81%;
+            left: 10px;
+            top: -39.5%;
+            border-radius: 50%;
+            border: 1px solid transparent; 
+            background: linear-gradient(-120deg,#d4b09800, #D4B098) border-box;
+            
+            @extend %mask;
+        }
+        .bottom-circle {
+            position: absolute;
+            width: 230%;
+            height: 160%;
+            left: 0px;
+            top: 5%;
+            border-radius: 50%;
+            border: 1px solid transparent; 
+            background: linear-gradient(-125deg,#d4b09800, #D4B098) border-box;
+            
+            @extend %mask;
+        }
+    }
+    &__heading{
+        font-family: 'Playfair Display', serif;
+        font-size: 32px;
+        color: #1B1A17;
+        margin-bottom: 38px;
+        white-space: nowrap;
+    }
+    &__description{
+        font-size: 16px;
+        line-height: 150%;
+        max-width: 376px;
+        color: #444240;
+        margin-bottom: 45px;
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 205px;
+        height: 64px;
+        background: #D4B098;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 1100px) {
+    .real-quality {
+        &__heading{
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        &__description{
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+        &__button{
+            width: 170px;
+            height: 57px;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .real-quality {
+        &__heading{
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        &__description{
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+        &__button{
+            width: 150px;
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .real-quality {
+        flex-wrap: wrap-reverse;
+        row-gap: 100px;
+    }
+}
