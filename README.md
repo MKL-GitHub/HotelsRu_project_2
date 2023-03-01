@@ -4,5 +4,5 @@
 
 <h2 align="center">Phone</h2>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/93647476/221927569-6298070e-d810-462b-90c4-5fc63549541b.png">
+  <img src="https://user-images.githubusercontent.com/93647476/222037927-541eb255-59a1-4301-aafd-ae595f311c4e.jpg">
 </div>
